@@ -7,7 +7,7 @@ const IncompleteTodo = ({ incompleteTodo, onClickComplete, onClickDelete }) => {
       <ul>
         {incompleteTodo.map((todo, index) => {
           return (
-            <li key={todo}>
+            <li key={index}>
               <div className="list-row">
                 <p>{todo}</p>
                 <button onClick={() => onClickComplete(todo, index)}>

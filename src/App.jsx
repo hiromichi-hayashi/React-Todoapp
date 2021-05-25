@@ -50,7 +50,13 @@ const App = () => {
         todoText={todoText}
         onChange={onChangeTodoText}
         onClick={onClickAdd}
+        disabld={incompleteTodo.length >= 5}
       />
+      {incompleteTodo.length >= 5 && (
+        <p style={{ color: "red" }}>
+          登録は５件までです。ToDoを消化して下さい。
+        </p>
+      )}
       <IncompleteTodo
         incompleteTodo={incompleteTodo}
         onClickComplete={onClickComplete}
